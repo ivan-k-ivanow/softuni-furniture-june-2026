@@ -30,6 +30,7 @@
 - [x] Add generate token on register
 - [x] Add logout
 - [x] Add login to user controller
+- [x] Add auth middleware
 - [ ] Add error utils for messages
 
 
