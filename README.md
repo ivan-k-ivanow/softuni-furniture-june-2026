@@ -28,7 +28,9 @@
 - [x] Add validation
 - [x] Hash password with zod transfrom and bcrypt
 - [x] Add generate token on register
-- [ ] 
+- [x] Add logout
+- [x] Add login to user controller
+- [ ] Add error utils for messages
 
 
 ## Bonus
