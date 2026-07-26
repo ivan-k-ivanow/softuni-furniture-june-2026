@@ -31,7 +31,18 @@
 - [x] Add logout
 - [x] Add login to user controller
 - [x] Add auth middleware
-- [ ] Add error utils for messages
+
+## Furniture endpoints 
+- [x] Create furniture endpoint
+- [x] Add create furniture schema
+- [x] Validate input
+- [x] Add error utils for messages
+- [x] Add furniture model
+- [ ] Add furniture service with create method
+
+
+
+
 
 
 ## Bonus
