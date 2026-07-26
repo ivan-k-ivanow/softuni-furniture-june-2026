@@ -56,3 +56,18 @@ export async function remove(req, res) {
         return res.status(500).json({ message: 'An error occurred while deleting the furniture' });
     }
 };
+
+export async function update(req, res) {
+    const { furnitureId } = req.params;
+    const userId = req.user.id;
+
+    try {
+        const furnitureData = createFurnitureSchema.parse(req.body);
+
+        const updatedFurniture = await furniureService.update(furnitureId, userId, furnitureData);
+
+        res.json({ message: 'Furniture updated successfully', furniture: updatedFurniture });    
+    } catch (error) {
+        return res.status(500).json({ message: getErrorMessage(error) });
+    };
+};
