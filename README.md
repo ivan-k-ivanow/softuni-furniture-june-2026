@@ -23,4 +23,7 @@
 - [x] Create user controller with register endpoint
 - [x] Add json parser
 - [x] Setup prosma ROM database
+- [x] Change nde with tsx
 - [x] Add user model
+- [x] Add validation
+- [x] Hash password with zod transfrom and bcrypt
