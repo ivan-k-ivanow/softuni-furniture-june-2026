@@ -1,9 +1,19 @@
 import { createFurnitureSchema } from "../schemas/furnitureSchema.js";
 import { furniureService } from "../services/index.js";
 import { getErrorMessage } from "../utils/errorUtils.js";
+import querystring from "querystring";
 
 export async function getAll(req, res) {
-    const furnitures = await furniureService.getAll();
+    let filter = {};
+
+    if (req.query.where) {
+        const result = querystring.parse(req.query.where.replaceAll('"', ''));
+
+        // quick and dirty fix
+        filter.userId = result._ownerId;
+    }
+
+    const furnitures = await furniureService.getAll(filter);
 
     res.json(furnitures);
 };
@@ -66,7 +76,7 @@ export async function update(req, res) {
 
         const updatedFurniture = await furniureService.update(furnitureId, userId, furnitureData);
 
-        res.json({ message: 'Furniture updated successfully', furniture: updatedFurniture });    
+        res.json({ message: 'Furniture updated successfully', furniture: updatedFurniture });
     } catch (error) {
         return res.status(500).json({ message: getErrorMessage(error) });
     };

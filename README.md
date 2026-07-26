@@ -48,8 +48,8 @@
 ## Ownership Functions
 - [x] Setup one to many relations
 - [x] Add owner on furniture create
-- [ ] Delete furniture
-- [ ] Edit furniture
+- [x] Delete furniture
+- [x] Edit furniture
 - [ ] My furnitures
 
 
