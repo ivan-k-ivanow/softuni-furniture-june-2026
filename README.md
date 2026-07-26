@@ -20,5 +20,7 @@
 - [x] Add CORS
 
 ## Authentication and Authorization
-- [x] Create user controller
+- [x] Create user controller with register endpoint
 - [x] Add json parser
+- [x] Setup prosma ROM database
+- [x] Add user model
