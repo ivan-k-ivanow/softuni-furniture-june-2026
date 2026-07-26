@@ -50,7 +50,7 @@
 - [x] Add owner on furniture create
 - [x] Delete furniture
 - [x] Edit furniture
-- [ ] My furnitures
+- [x] My furnitures
 
 
 ## Bonuses
