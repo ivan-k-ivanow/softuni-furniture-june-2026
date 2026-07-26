@@ -13,3 +13,7 @@
 
 ## Setup REST API
 - [x] Initialize project
+- [x] Add express
+- [x] Add gitignore
+- [ ] Add base furniture controller
+- [ ] Add CORS
