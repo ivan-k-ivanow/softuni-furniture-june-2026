@@ -31,6 +31,7 @@
 - [x] Add logout
 - [x] Add login to user controller
 - [x] Add auth middleware
+- [x] Add isAuth middleware
 
 ## Furniture endpoints 
 - [x] Create furniture endpoint
@@ -44,10 +45,13 @@
 - [x] add get one endpoint
 - [x] furniture details
 
+## Ownership Functions
+- [x] Setup one to many relations
+- [x] Add owner on furniture create
+- [ ] Delete furniture
+- [ ] Edit furniture
+- [ ] My furnitures
 
 
-
-
-
-## Bonus
+## Bonuses
 - [ ] Invalidate user session

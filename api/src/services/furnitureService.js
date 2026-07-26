@@ -1,7 +1,14 @@
 import { prisma } from '../lib/prisma.js';
 
 export async function getAll() {
-    const result = await prisma.furniture.findMany();
+    const result = await prisma.furniture.findMany({
+        select: {
+            id: true,
+            description: true,
+            price: true,
+            img: true,
+        }
+});
 
     return result.map( f => ({...f, _id: f.id }));
 }
@@ -11,11 +18,24 @@ export async function getById(furnitureId) {
         where: { id: furnitureId }
     });
 
-    return result ? { ...result, _id: result.id } : null;
+    return result ? { ...result, _id: result.id, _ownerId: result.userId } : null;
 }
 
-export function create(furnitureData) {
+export function create(furnitureData, userId) {
     return prisma.furniture.create({
-        data: furnitureData,
+        data: {
+            ...furnitureData,
+            userId
+        }
+    });
+};
+
+
+export async function remove(furnitureId, userId) {
+    return prisma.furniture.delete({
+        where: {
+            id: furnitureId,
+            userId: userId
+        }
     });
 };
