@@ -38,7 +38,8 @@
 - [x] Validate input
 - [x] Add error utils for messages
 - [x] Add furniture model
-- [ ] Add furniture service with create method
+- [x] Add furniture service with create method
+- [x] List all furnitures
 
 
 
