@@ -15,5 +15,6 @@
 - [x] Initialize project
 - [x] Add express
 - [x] Add gitignore
-- [ ] Add base furniture controller
+- [x] Add base furniture controller
+- [x] Add routes
 - [ ] Add CORS
