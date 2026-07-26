@@ -27,3 +27,9 @@
 - [x] Add user model
 - [x] Add validation
 - [x] Hash password with zod transfrom and bcrypt
+- [x] Add generate token on register
+- [ ] 
+
+
+## Bonus
+- [ ] Invalidate user session
