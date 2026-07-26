@@ -40,6 +40,9 @@
 - [x] Add furniture model
 - [x] Add furniture service with create method
 - [x] List all furnitures
+- [x] map id to _id
+- [x] add get one endpoint
+- [x] furniture details
 
 
 

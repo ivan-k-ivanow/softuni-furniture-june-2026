@@ -8,6 +8,18 @@ export async function getAll(req, res) {
     res.json(furnitures);
 };
 
+export async function getById(req, res) {
+    const { furnitureId } = req.params;
+
+    const furniture = await furniureService.getById(furnitureId);
+
+    if (!furniture) {
+        return res.status(404).json({ message: 'Furniture not found' });
+    }
+
+    res.json(furniture);
+}
+
 export async function create(req, res) {    
 
     const { success, data, error } = createFurnitureSchema.safeParse(req.body);

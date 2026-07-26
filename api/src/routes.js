@@ -8,7 +8,7 @@ const routes = Router();
 
 routes.get('/data/catalog', furnitureController.getAll);
 routes.post('/data/catalog', furnitureController.create);
-
+routes.get('/data/catalog/:furnitureId', furnitureController.getById);
 // User routes
 routes.post('/users/register', userController.register);
 routes.post('/users/login', userController.login);
