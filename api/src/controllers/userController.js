@@ -1,3 +1,4 @@
+import { addInvalidToken } from "../invalidTokens.js";
 import { userSchema } from "../schemas/userSchema.js";
 import { userService } from "../services/index.js";
 import { generateAuthToken } from "../utils/tokenUtils";
@@ -42,6 +43,14 @@ export async function login(req, res) {
 
 
 export async function logout(req, res) {
+    const token = req.headers['x-authorization'];
+
+    if (!token) {
+        return res.status(401).json({ error: 'No token provided' });
+    }
+
+    addInvalidToken(token);
+
     res.json({ message: 'Logout successful' });
 };
 

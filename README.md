@@ -54,4 +54,4 @@
 
 
 ## Bonuses
-- [ ] Invalidate user session
+- [x] Invalidate user session
